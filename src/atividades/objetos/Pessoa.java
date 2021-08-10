@@ -1,19 +1,28 @@
-package atividades.ex1;
-
-/*
-*  Crie uma classe para representar uma pessoa, com os atributos privados de nome, data de
-nascimento e altura. Crie os métodos públicos necessários para sets e gets e
-*
-* também um método para imprimir todos dados de uma pessoa. Crie um método para calcular a idade da pessoa.
-* */
+package atividades.objetos;
 
 //Classe Mãe
+
 public class Pessoa {
     // ————————————————————————————————————————— Atributos.
     private String nome;
     private String dataNascimento;
     private double altura;
     private int idade;
+
+    // ————————————————————————————————————————— Construtor.
+    public Pessoa(){}
+
+    public Pessoa(String novoNome, double novaAltura, String novaDataNascimento){
+        this.nome = novoNome;
+        this.altura = novaAltura;
+        this.dataNascimento = novaDataNascimento;
+    }
+
+    public Pessoa(String novoNome, double novaAltura, int novaIdade){
+        this.nome = novoNome;
+        this.altura = novaAltura;
+        this.idade = novaIdade;
+    }
 
     // ————————————————————————————————————————— Gets e Sets.
 
@@ -41,10 +50,11 @@ public class Pessoa {
         this.altura = altura;
     }
 
-    public void getInfos(){
-        System.out.println("Nome: "+nome + "\nData de Nascimento: "+dataNascimento+"\nAltura: "+altura+"\nIdade: "+idade);
+    public int getIdade() {
+        return idade;
     }
-    // ————————————————————————————————————————— Métodos.
 
-
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
 }

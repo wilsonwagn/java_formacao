@@ -32,7 +32,7 @@ public abstract class Conta {
         } else {
             return false;
         }
-        };
+        }
 
     public boolean transfere(double valor, Conta destino){
         if (saca(valor)){
