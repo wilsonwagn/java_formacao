@@ -1,6 +1,6 @@
 package atividades.objetos;
+
 import java.util.ArrayList;
-import java.util.List;
 
 /*
 . Crie uma classe Agenda que pode armazenar 10 pessoas e que seja capaz de realizar as seguintes

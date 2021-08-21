@@ -2,6 +2,7 @@ package atividades.ex5;
 import java.util.Scanner;
 
 public class Controle {
+
     public static String leString(String s){
         System.out.print(s);
         Scanner scan = new Scanner(System.in);

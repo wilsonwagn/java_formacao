@@ -1,9 +1,11 @@
 package atividades.ex5;
 
+import atividades.objetos.Caminhao;
+
 import java.util.ArrayList;
 
 public class Selecao extends Controle{
-    private static ArrayList<Caminhao> listaCaminhoes = new ArrayList<>();
+    private static ArrayList<Caminhao> listaCaminhoes = new ArrayList();
     int numPluviometro;
 
     public void cadastraCaminhao(){

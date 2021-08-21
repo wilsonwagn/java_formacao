@@ -31,6 +31,11 @@ public class TestaVariaveis {
         short valorPequeno; //Até 16 bits
         byte valorAleatorio; //-128 até 127
 
+        System.out.println(Integer.MAX_VALUE); //Máximo de valor (INT) que pode ser atribuido.
+        System.out.println(Integer.MIN_VALUE); //Menor valor (INT) que pode ser atribuido.
+
+
+
         double pontoFlutuante1; //Ponto flutuante de até 64bits
         float pontoFlutuante = 3.4f; //Guarda valores quebrados de até 32 bits
 

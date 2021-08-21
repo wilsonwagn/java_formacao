@@ -1,7 +1,5 @@
 package curso01_Java_JRE_e_JDK.c6_laços;
 
-import javax.swing.*;
-
 public class TestaLaços {
     public static void main(String[] args) {
         /* ————————————————————————— WHILE ————————————————————————— */
