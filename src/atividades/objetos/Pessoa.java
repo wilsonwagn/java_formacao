@@ -2,29 +2,26 @@ package atividades.objetos;
 
 //Classe Mãe
 
+import java.math.BigDecimal;
+
 public class Pessoa {
-    // ————————————————————————————————————————— Atributos.
+
     private String nome;
     private String dataNascimento;
-    private double altura;
+    private BigDecimal altura;
     private int idade;
-
-    // ————————————————————————————————————————— Construtor.
-    public Pessoa(){}
 
     public Pessoa(String novoNome, double novaAltura, String novaDataNascimento){
         this.nome = novoNome;
-        this.altura = novaAltura;
+        this.altura = new BigDecimal(Double.toString(novaAltura));
         this.dataNascimento = novaDataNascimento;
     }
 
     public Pessoa(String novoNome, double novaAltura, int novaIdade){
         this.nome = novoNome;
-        this.altura = novaAltura;
+        this.altura = new BigDecimal(Double.toString(novaAltura));
         this.idade = novaIdade;
     }
-
-    // ————————————————————————————————————————— Gets e Sets.
 
     public String getNome() {
         return nome;
@@ -42,12 +39,12 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public double getAltura() {
-        return altura;
+    public BigDecimal getAltura() {
+        return this.altura;
     }
 
     public void setAltura(double altura) {
-        this.altura = altura;
+        this.altura = new BigDecimal(Double.toString(altura));
     }
 
     public int getIdade() {

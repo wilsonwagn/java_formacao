@@ -1,4 +1,4 @@
-package curso01_Java_JRE_e_JDK.c1_primeiroPrograma;
+package curso01_Java.c1_primeiroPrograma;
 
 public class Main {
 

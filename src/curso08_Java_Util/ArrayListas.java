@@ -17,6 +17,7 @@ public class ArrayListas {
 
         //Determinada posição:
         Conta ref = (Conta) lista.get(0);
+        System.out.println(ref);
         System.out.println(ref.getNumero());
 
         // Removendo:

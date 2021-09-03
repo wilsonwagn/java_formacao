@@ -1,62 +1,32 @@
 package atividades.objetos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
-/*
-. Crie uma classe Agenda que pode armazenar 10 pessoas e que seja capaz de realizar as seguintes
-operações: */
-
-public class Agenda extends Pessoa {
-    // ————————————————————————————————————————— Atributos.
+public class Agenda {
     private static ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+    Integer pessoaEncontradaIndex;
 
-    // ————————————————————————————————————————— Métodos.
+    public void armazenaPessoa(String nome, double altura, int idade) {
+        if (listaDePessoas.size() <= 10) {
+            listaDePessoas.add(new Pessoa(nome, altura, idade));}}
 
-    public void armazenaPessoa(String nome, double altura, int idade){
-       if (listaDePessoas.size() <= 10){
-           listaDePessoas.add(new Pessoa(nome, altura, idade));
-       } else {
-           System.out.println("Só é possível adicionar 10 pessoas.");
-       }
-    }
-    public void removePessoa(String nome){
-        int contResposta = buscaPessoa(nome);
-        if (contResposta == -1){
-            System.out.println(nome+ " não foi encontrado no sistema.");
-        } else {
-            System.out.println(listaDePessoas.get(contResposta).getNome()+ " removido(a) com sucesso.");
-            listaDePessoas.remove(contResposta);
-        }
-    }
-    public int buscaPessoa(String nome){
-        int cont = 0;
-        boolean encontrou = false;
-        while (cont<= (listaDePessoas.size()-1)){
-            if (nome == listaDePessoas.get(cont).getNome()){
-                encontrou = true;
-                break;
-            }
-            cont+=1;
-        }
-        if (encontrou == false) {
-            cont = -1;
-        }
-        return cont;
+    public void removePessoa(String nome) {
+        boolean encontrado = listaDePessoas.stream().filter(o -> o.getNome().equals(nome)).findFirst().isPresent();
+        if(encontrado){ listaDePessoas.remove(buscaPessoa(nome));}};
 
-    }
-    public void imprimeAgenda(){
-        int cont = 0;
-        while (cont <= (listaDePessoas.size()-1)){
-            imprimePessoa(cont);
-            cont+=1;
-        }
-        // imprime os dados de todas as pessoas da agenda
-    }
-    public void imprimePessoa(int index){
+    public int buscaPessoa(String nome) {
+        listaDePessoas.forEach(x -> { 
+            if (nome.equals(x.getNome())) {
+                pessoaEncontradaIndex = listaDePessoas.indexOf(x);};});
+        return pessoaEncontradaIndex;};
+
+    public void imprimeAgenda() {
+        listaDePessoas.forEach(x -> { imprimePessoa(listaDePessoas.indexOf(x)); });};
+
+    public void imprimePessoa ( int index){
         String nome = listaDePessoas.get(index).getNome();
-        Double altura = listaDePessoas.get(index).getAltura();
+        BigDecimal altura = listaDePessoas.get(index).getAltura();
         int idade = listaDePessoas.get(index).getIdade();
-        System.out.println("Nome: "+nome +"\nAltura: "+altura+"\nIdade: "+idade+"\n");
-        //imprime os dados da pessoa que está na posição “i” da agenda.
-    }
+        System.out.println("Nome: "+nome +"\nAltura: "+altura+"\nIdade: "+idade+"\n");}
 }

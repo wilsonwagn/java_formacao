@@ -2,6 +2,7 @@ package curso02_03_JavaOO_e_Polimorfismo.c3_ByteBank3.Modulos;
 
 // CLASSE MÃE
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Objects;
  * @author WilsonWagn
  */
 
-public abstract class Conta implements Comparable<Conta> {
+public abstract class Conta implements Comparable<Conta>, Serializable {
     /**
      * Construtor para inicializar o objeto.
      *
@@ -29,7 +30,7 @@ public abstract class Conta implements Comparable<Conta> {
     double saldo; // Package Private | Apenas visivel no pacote.
     private int agencia;
     private int numero;
-    private Cliente titular;
+    private transient Cliente titular;
     private static int total = 0; //Aqui fica a quantidade de contas criadas.
 
     // ————————————————————————————————————————— Métodos.

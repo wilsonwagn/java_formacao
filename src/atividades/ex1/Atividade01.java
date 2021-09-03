@@ -6,21 +6,21 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
-public class Atividade01 extends Pessoa {
-    public Atividade01(String novoNome, double novaAltura, String novaDataNascimento) {
-        super(novoNome, novaAltura, novaDataNascimento);
-    }
+public class Atividade01 {
 
-    public void calcularIdade(){
-        LocalDate dataHoje = LocalDate.now();
-        LocalDate dataAniversario = formatandoData();
-        Period diferencaTempo = Period.between(dataAniversario, dataHoje);
-        System.out.println("A sua idade é: "+diferencaTempo.getYears());
+    public void calcularIdade(Pessoa pessoa) {
+        try {
+            LocalDate dataHoje = LocalDate.now();
+            LocalDate dataAniversario = formatandoData(pessoa.getDataNascimento());
+            Period diferencaTempo = Period.between(dataAniversario, dataHoje);
+            System.out.println("A sua idade é: " + diferencaTempo.getYears());
+        } catch (Exception ex){
+            System.out.println("Informe uma data corretamente!");
+        }
     }
-
-    public LocalDate formatandoData(){
+    public LocalDate formatandoData(String dataNascimento){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate dataFormatada = LocalDate.parse(getDataNascimento(), formatter);
+        LocalDate dataFormatada = LocalDate.parse(dataNascimento, formatter);
         return dataFormatada;
     }
 

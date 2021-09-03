@@ -10,10 +10,8 @@ public class Controle {
     }
 
     public static int leInteiro(){
-
         int valor = 0;
         Scanner valorDigitado = new Scanner(System.in);
-
         try {
             valor = Integer.parseInt(valorDigitado.nextLine());
         } catch (Exception ex){

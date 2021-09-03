@@ -1,30 +1,21 @@
 package atividades.objetos;
 
-public class ControleRemoto extends Televisao {
-    public void aumentarVolume(){
-        if (getVolume() >= 0 && getVolume() <= 100){
-            int volumeAtual = getVolume()+1;
-            setVolume(volumeAtual);
-        }
-    }
-    public void diminuirVolume(){
-        if (getVolume() >= 0 && getVolume() <= 100){
-            int volumeAtual = getVolume()-1;
-            setVolume(volumeAtual);
-        }
-    }
+public class ControleRemoto {
+    //Televisao tv = new Televisao();
 
-    public void aumentarCanais(){
-        int numCanal = getCanais()+1;
-        setCanais(numCanal);
-    }
-    public void diminuirCanais(){
-        int numCanal = getCanais()-1;
-        setCanais(numCanal);
-    }
+    public void aumentarVolume(Televisao tv){
+        if (tv.getVolume() >= 0 && tv.getVolume() <= 100){
+            tv.setVolume(tv.getVolume()+1);}}
 
-    public void trocarCanal(int novoCanal){
-        setCanalAtual(novoCanal);
-    }
+    public void diminuirVolume(Televisao tv){
+        if (tv.getVolume() >= 0 && tv.getVolume() <= 100){
+            tv.setVolume(tv.getVolume()-1);}}
+
+    public void aumentarCanais(Televisao tv){tv.setCanais(tv.getCanais()+1);}
+
+    public void diminuirCanais(Televisao tv){tv.setCanais(tv.getCanais()-1);}
+
+    public void trocarCanal(int novoCanal, Televisao tv){
+        tv.setCanalAtual(novoCanal);}
 
 }

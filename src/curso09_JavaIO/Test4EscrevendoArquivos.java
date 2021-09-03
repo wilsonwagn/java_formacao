@@ -13,7 +13,7 @@ public class Test4EscrevendoArquivos {
         //Escrevendo no arquivo:
         InputStream fis = System.in;
         InputStreamReader isr = new InputStreamReader(fis);
-        BufferedReader br = new BufferedReader(isr);
+        BufferedReader br = new BufferedReader(isr); // String para ler o que é digitado
 
         String linha = br.readLine(); //Lendo a linha do input
         while(linha != null && !linha.isEmpty()){ //Enquanto a linha for diferente de nula ou vazia, continue rodando:
@@ -30,3 +30,5 @@ public class Test4EscrevendoArquivos {
 
     }
 }
+
+

@@ -1,4 +1,4 @@
-package curso01_Java_JRE_e_JDK.c3_tiposVariaveis;
+package curso01_Java.c3_tiposVariaveis;
 
 public class TestaVariaveis {
     public static void main(String[] args) {
@@ -33,7 +33,6 @@ public class TestaVariaveis {
 
         System.out.println(Integer.MAX_VALUE); //Máximo de valor (INT) que pode ser atribuido.
         System.out.println(Integer.MIN_VALUE); //Menor valor (INT) que pode ser atribuido.
-
 
 
         double pontoFlutuante1; //Ponto flutuante de até 64bits

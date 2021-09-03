@@ -10,6 +10,11 @@ public class Converter {
         int a = 5;
         String a2 = Integer.toString(a);
 
+        // Double para String.
+        Double b = 2.55;
+        String b2 = Double.toString(b);
+        System.out.println(b2);
+
         // String para Boolean.
         String kk = "true";
         boolean resultado = Boolean.parseBoolean(kk);
@@ -17,6 +22,8 @@ public class Converter {
         // Double para Int:
         double valor4 = 50.5;
         int valorRes = (int) valor4;
-        System.out.println("Prints: " + valorConvertido + " | " + a2 + " | " + resultado + " | " + valorRes);
+
+        System.out.println("Prints: " + valorConvertido + " | " + a2 + " | " +
+                resultado + " | " + valorRes + " | " + b2);
     }
 }

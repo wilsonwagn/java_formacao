@@ -6,14 +6,18 @@ public class Caminhao {
 
     private String tipoCaminhao;
     private int quantTransportado;
-    private ArrayList<String> listaPluviometros = new ArrayList<String>();
+    private ArrayList listaPluviometros;
+    private int total;
+
 
     // ————————————————————————————————————————————— Construtor:
 
-    public Caminhao(String tipo, int quant, ArrayList listaPluviometrosNova){
+    public Caminhao(String tipo, int quant, ArrayList listaPluviometrosNova, int totalNovo){
         tipoCaminhao = tipo;
         quantTransportado = quant;
         listaPluviometros = listaPluviometrosNova;
+        total = totalNovo;
+
     }
     // ————————————————————————————————————————————— GET and SET
     public String getTipoCaminhao() {
@@ -32,11 +36,15 @@ public class Caminhao {
         this.quantTransportado = quantTransportado;
     }
 
-    public ArrayList<String> getListaPluviometros() {
+    public ArrayList getListaPluviometros() {
         return listaPluviometros;
     }
 
-    public void setListaPluviometros(ArrayList<String> listaPluviometros) {
+    public void setListaPluviometros(ArrayList listaPluviometros) {
         this.listaPluviometros = listaPluviometros;
+    }
+
+    public int getTotal() {
+        return total;
     }
 }

@@ -26,7 +26,8 @@ public class Fluxo3ComErro {
 
     private static void metodo2() {
         System.out.println("ini do metodo 2");
-        metodo2();
+        //metodo2();
+
         System.out.println("fim do metodo 2");
     }
 }

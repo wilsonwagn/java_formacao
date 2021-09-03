@@ -1,4 +1,4 @@
-package curso01_Java_JRE_e_JDK.c5_condicionaisIF;
+package curso01_Java.c5_condicionaisIF;
 
 public class exercicioCondicionais {
     public static void main(String[] args) {

@@ -1,8 +1,11 @@
 package curso02_03_JavaOO_e_Polimorfismo.c3_ByteBank3.Modulos;
 
+import java.io.Serializable;
+
 // Classe filha
 public class ContaCorrente extends Conta implements Tributavel{
     // Construtor padrão da classe mãe:
+
     public ContaCorrente(int agencia, int conta){
         super(agencia, conta);
     }

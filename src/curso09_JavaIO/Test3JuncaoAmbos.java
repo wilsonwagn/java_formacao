@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Test3JuncaoAmbos {
     public static void main(String[] args) throws IOException {
-        // Escrevendo e Criando:
+        // Escrevendo e Criando um arquivo:
         OutputStream fos = new FileOutputStream("texto3.txt");
         Writer osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);

@@ -1,4 +1,4 @@
-package curso01_Java_JRE_e_JDK.c6_laços;
+package curso01_Java.c6_laços;
 
 public class ExerciciosLaços {
     public static void main(String[] args) {
@@ -18,5 +18,6 @@ public class ExerciciosLaços {
                 }
             System.out.println("O fatorial de " + val + ": " + resultado);
         }
+
     }
 }

@@ -1,4 +1,4 @@
-package curso01_Java_JRE_e_JDK.c4_caracteres;
+package curso01_Java.c4_caracteres;
 
 public class TestaCaracteres {
     public static void main(String[] args) {

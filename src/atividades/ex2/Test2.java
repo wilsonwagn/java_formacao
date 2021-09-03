@@ -13,13 +13,18 @@ public class Test2 {
         novaAgenda.armazenaPessoa("Minaj", 1.54, 02);
         novaAgenda.armazenaPessoa("Wilson", 1.41, 98);
         //  ————————————————————————————————————————— Buscando por nome:
-        int index = novaAgenda.buscaPessoa("Wilson");
+        int index = novaAgenda.buscaPessoa("Nicki");
         novaAgenda.imprimePessoa(index);
         //  ————————————————————————————————————————— Removendo por nome:
-        novaAgenda.removePessoa("Wilson"); //
-        novaAgenda.removePessoa("Nicki Minaj"); //
+        novaAgenda.removePessoa("Bruno"); //
         //  ————————————————————————————————————————— Mostrando todos:
+        System.out.println("------------");
         novaAgenda.imprimeAgenda();
+        novaAgenda.removePessoa("Brunosdsadasd"); //
+        System.out.println("------------");
+        novaAgenda.imprimeAgenda();
+
+
 
 
 

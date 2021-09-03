@@ -1,7 +1,10 @@
 package curso05_Interfaces;
 
-@interface InformacaoAula {
+interface InformacaoAula {
+
     String autor();
     int aulaNum();
-    String blog() default "nickiminaj.com";
+    default String blog(){
+        return "nickiminaj.com";
+    };
 }
