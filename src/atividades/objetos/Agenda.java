@@ -13,6 +13,7 @@ public class Agenda {
 
     public void removePessoa(String nome) {
         boolean encontrado = listaDePessoas.stream().filter(o -> o.getNome().equals(nome)).findFirst().isPresent();
+
         if(encontrado){ listaDePessoas.remove(buscaPessoa(nome));}};
 
     public int buscaPessoa(String nome) {

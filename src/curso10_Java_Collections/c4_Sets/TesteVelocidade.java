@@ -1,4 +1,4 @@
-package curso10_Java_Collections;
+package curso10_Java_Collections.c4_Sets;
 
 import java.util.*;
 

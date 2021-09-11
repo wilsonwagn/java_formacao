@@ -26,7 +26,7 @@ public class ArrayListas2 {
         // List é um objeto mãe das listas:
         List listaNormal = new LinkedList<>();
 
-        // Vector
+        // Vector | Não é recomendado usar:
         Vector vetor = new Vector();
 
         // Collection (Classe Mãe), então posso fazer isso também, mas não é recomendando nesse caso de list's:

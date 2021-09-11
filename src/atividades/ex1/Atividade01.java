@@ -21,6 +21,7 @@ public class Atividade01 {
     public LocalDate formatandoData(String dataNascimento){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate dataFormatada = LocalDate.parse(dataNascimento, formatter);
+        System.out.println(dataFormatada);
         return dataFormatada;
     }
 
