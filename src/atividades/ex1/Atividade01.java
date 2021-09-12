@@ -8,14 +8,14 @@ import java.time.format.DateTimeFormatter;
 
 public class Atividade01 {
 
-    public void calcularIdade(Pessoa pessoa) {
+    public String calcularIdade(Pessoa pessoa) {
         try {
             LocalDate dataHoje = LocalDate.now();
             LocalDate dataAniversario = formatandoData(pessoa.getDataNascimento());
             Period diferencaTempo = Period.between(dataAniversario, dataHoje);
-            System.out.println("A sua idade é: " + diferencaTempo.getYears());
+            return "A sua idade é: " + diferencaTempo.getYears();
         } catch (Exception ex){
-            System.out.println("Informe uma data corretamente!");
+            return "Informe uma data corretamente!";
         }
     }
     public LocalDate formatandoData(String dataNascimento){
